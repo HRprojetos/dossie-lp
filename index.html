@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dossiê do Financiamento · PCI e dossiê de engenharia sem retrabalho</title>
+<meta name="description" content="O manual do engenheiro de financiamento: PCI campo a campo, orçamento, cronograma, 34 cartões para o cliente e mais de 250 itens de checklist. R$67.">
+<meta property="og:title" content="Dossiê do Financiamento">
+<meta property="og:description" content="PCI e dossiê de engenharia em 1 dia, sem os erros que mais geram devolução.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#0c110e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d6b4f'/%3E%3Cpath d='M7 16 16 8l9 8' fill='none' stroke='%23e9d9a6' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11 15v9h10v-9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel · Dossiê do Financiamento -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1443207727693216');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Dossiê do Financiamento',value:67,currency:'BRL'});
+</script>
+
+<style>
+:root{
+  --bg:#0c110e;--bg2:#111815;--card:#151d19;--line:#26312b;--ink:#eef2ef;--mute:#a7b1aa;--dim:#7d877f;
+  --green:#4dbb8b;--green-d:#1d6b4f;--gold:#d6b25e;--red:#e05a4f;--paper:#f7f5ee;--paper-ink:#1a1f1c;
+  --r:20px;--max:1080px
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:72px 0;position:relative}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{letter-spacing:-.03em;line-height:1.08;font-weight:800}
+h1{font-size:clamp(36px,6vw,64px)}
+h2{font-size:clamp(28px,4.4vw,44px);margin:10px 0 18px}
+h3{font-size:20px;letter-spacing:-.01em}
+em{font-style:normal;color:var(--green)}
+p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
+.muted{color:var(--mute)}
+
+/* topo */
+.top{position:sticky;top:0;z-index:20;background:rgba(12,17,14,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+.brand svg{width:30px;height:30px;flex:none}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#06120c;font-weight:800;font-size:18px;text-decoration:none;padding:18px 30px;border-radius:999px;transition:transform .15s,box-shadow .15s;box-shadow:0 10px 30px rgba(77,187,139,.25)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(77,187,139,.35)}
+.btn.sm{font-size:14px;padding:10px 18px;box-shadow:none}
+.btn-note{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:14px;font-size:14px;color:var(--mute)}
+.btn-note span::before{content:"✓ ";color:var(--green);font-weight:800}
+
+/* hero */
+.hero{padding:56px 0 72px;overflow:hidden;background:radial-gradient(900px 600px at 90% -10%,#1f5a43 0%,transparent 60%),radial-gradient(700px 500px at -10% 110%,#2a2412 0%,transparent 55%)}
+.hero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,#000 0%,transparent 80%);pointer-events:none}
+.hero-in{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{margin:14px 0 18px}
+.hero .price-line{margin:26px 0 18px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.price-line b{font-size:44px;font-weight:900;letter-spacing:-.04em}
+.price-line s{color:var(--dim);font-size:20px;font-weight:600}
+.price-line small{color:var(--gold);font-weight:700;font-size:14px}
+.cover{position:relative}
+.cover img{border-radius:24px;box-shadow:0 40px 90px rgba(0,0,0,.6);border:1px solid var(--line);transform:rotate(2deg)}
+.cover .tag{position:absolute;right:-12px;top:-14px;background:var(--paper);color:var(--paper-ink);border-radius:14px;padding:12px 16px;font-weight:700;font-size:14px;box-shadow:0 20px 40px rgba(0,0,0,.45);transform:rotate(4deg)}
+.cover .tag b{display:block;font-size:26px;letter-spacing:-.03em;color:var(--green-d)}
+
+/* números */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:56px}
+.stats div{background:var(--bg2);padding:22px 18px}
+.stats b{display:block;font-size:34px;font-weight:900;letter-spacing:-.04em}
+.stats span{font-size:14px;color:var(--mute)}
+
+/* dor */
+.devolvido{background:var(--paper);color:var(--paper-ink);border-radius:24px;padding:30px 30px 26px;box-shadow:0 30px 70px rgba(0,0,0,.5);transform:rotate(-1.2deg);max-width:520px}
+.devolvido .hd{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#5b645e}
+.stamp{border:3px solid #b3261e;color:#b3261e;padding:4px 12px;border-radius:8px;transform:rotate(7deg);font-size:18px;letter-spacing:.12em}
+.devolvido ul{list-style:none;margin-top:18px;font-weight:500}
+.devolvido li{padding:9px 0;border-bottom:1px solid #e3dfd3}
+.devolvido li::before{content:"✕  ";color:#b3261e;font-weight:800}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.chat{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.bubble{background:#1f2c25;border-radius:18px 18px 18px 6px;padding:12px 16px;max-width:88%;font-size:16px}
+.bubble small{display:block;color:var(--dim);font-size:12px;text-align:right;margin-top:2px}
+.bubble.me{background:#2c5a45;align-self:flex-end;border-radius:18px 18px 6px 18px}
+
+/* método */
+.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.part{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.part .n{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.part h3{margin:6px 0 12px}
+.part ul{list-style:none;font-size:15px;color:var(--mute)}
+.part li{padding:5px 0;border-top:1px dashed var(--line)}
+.part li b{color:var(--ink);font-weight:600}
+
+/* entregáveis */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.feat{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:linear-gradient(180deg,var(--card),var(--bg))}
+.feat .ic{width:44px;height:44px;border-radius:12px;background:rgba(77,187,139,.12);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.feat p{color:var(--mute);font-size:15px;margin-top:8px}
+
+/* cartão */
+.card-demo{background:var(--paper);color:var(--paper-ink);border-radius:24px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5);max-width:440px}
+.card-demo .t{background:var(--green-d);color:#fff;padding:22px 24px}
+.card-demo .t small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#e9d9a6;font-weight:700}
+.card-demo .t h3{margin-top:6px;font-size:22px;line-height:1.2}
+.card-demo .b{padding:20px 24px;font-size:16px}
+.card-demo .base{padding:0 24px 18px;font-size:13px;color:#5b645e}
+.card-demo .f{border-top:1px solid #e3dfd3;padding:12px 24px;display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px;color:var(--green-d)}
+.card-demo .f svg{width:22px;height:22px}
+
+/* celular */
+.phone{width:280px;margin:0 auto;border:10px solid #1b231f;border-radius:38px;background:var(--bg);box-shadow:0 30px 70px rgba(0,0,0,.6);overflow:hidden}
+.phone .scr{padding:16px 14px 20px;font-size:13px}
+.phone .bar{height:4px;border-radius:4px;background:var(--line);margin:8px 0 14px;overflow:hidden}.phone .bar i{display:block;height:100%;width:62%;background:linear-gradient(90deg,var(--green),var(--gold))}
+.phone .row{display:flex;gap:10px;align-items:center;padding:9px 10px;border-radius:10px}
+.phone .row.on{background:#18241e}
+.phone .row .k{width:22px;height:22px;border-radius:7px;border:2px solid var(--green);display:grid;place-items:center;font-size:12px;color:#06120c;flex:none}
+.phone .row.done .k{background:var(--green)}
+.phone .row.done span{color:var(--dim);text-decoration:line-through}
+
+/* prova */
+.proof{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.big{font-size:clamp(90px,16vw,170px);font-weight:900;letter-spacing:-.06em;line-height:.85}
+.big i{font-style:normal;color:var(--green)}
+
+/* para quem */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.fit div{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--card)}
+.fit ul{list-style:none;margin-top:12px}
+.fit li{padding:7px 0 7px 28px;position:relative;color:var(--mute)}
+.fit .yes li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+.fit .no li::before{content:"✕";position:absolute;left:0;color:var(--red);font-weight:900}
+
+/* oferta */
+.offer{max-width:640px;margin:34px auto 0;border:2px solid var(--green);border-radius:28px;background:radial-gradient(500px 300px at 100% 0%,rgba(77,187,139,.16),transparent 60%),var(--card);padding:34px 30px;text-align:center}
+.offer ul{list-style:none;text-align:left;margin:22px 0 26px;display:grid;gap:8px}
+.offer li{padding-left:28px;position:relative}
+.offer li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+.offer .p{font-size:64px;font-weight:900;letter-spacing:-.05em;line-height:1}
+.offer .p small{font-size:22px;color:var(--dim);font-weight:600;letter-spacing:0;text-decoration:line-through;margin-left:8px}
+.lote{margin:18px 0 0;font-size:14px;color:var(--gold);font-weight:600}
+.bump{margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);font-size:14px;color:var(--mute);text-align:left}
+.bonus-box{border:2px dashed var(--gold);border-radius:24px;padding:26px;background:rgba(214,178,94,.06)}
+.bonus-tag{display:inline-block;background:var(--gold);color:#1a1405;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:6px 14px}
+.bonus-box ul{list-style:none;margin-top:16px;display:grid;gap:10px}
+.bonus-box li{padding-left:26px;position:relative;color:var(--mute)}
+.bonus-box li b{color:var(--ink)}
+.bonus-box li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+.guar{display:flex;gap:18px;align-items:center;max-width:640px;margin:22px auto 0;padding:20px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
+.guar .seal{flex:none;width:72px;height:72px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;text-align:center;font-weight:900;color:var(--gold);line-height:1;font-size:26px}
+.guar .seal small{display:block;font-size:10px;letter-spacing:.1em}
+
+/* faq */
+.faq{max-width:760px;margin:30px auto 0}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--green);font-size:24px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--mute);margin-top:10px}
+
+/* rodapé */
+.avisos{font-size:13px;color:var(--dim);border-top:1px solid var(--line);padding:30px 0 110px}
+.avisos p+p{margin-top:10px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(12,17,14,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .25s}
+.sticky.show{transform:none}
+.sticky b{font-size:20px;letter-spacing:-.03em}.sticky small{display:block;font-size:12px;color:var(--mute)}
+.sticky .btn{font-size:15px;padding:12px 20px}
+
+.center{text-align:center}.center p.lead{margin:0 auto}
+.mt{margin-top:30px}
+
+@media (max-width:860px){
+  section{padding:56px 0}
+  .hero-in,.two,.proof{grid-template-columns:1fr;gap:36px}
+  .cover{max-width:280px;margin:0 auto}
+  .parts,.feats{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .fit{grid-template-columns:1fr}
+  .top .btn{display:none}
+  .sticky{display:flex}
+  .devolvido{transform:none}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1d6b4f"/><path d="M7 16 16 8l9 8" fill="none" stroke="#e9d9a6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 15v9h10v-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M14 24v-4h4v4" fill="none" stroke="#fff" stroke-width="2"/></svg>Engenheiro de Financiamento</a>
+  <a class="btn sm" data-checkout href="https://pay.cakto.com.br/g8k4g3h">Quero o Dossiê · R$67</a>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="grid-bg"></div><div class="wrap">
+  <div class="hero-in">
+    <div>
+      <div class="kicker">Para engenheiros que fazem projeto financiado</div>
+      <h1>Monte a PCI e o dossiê <em>em 1 dia</em>, sem a devolução por detalhe.</h1>
+      <p class="lead">O método completo, do terreno à averbação: PCI campo a campo, orçamento dentro das faixas, cronograma, os erros que mais geram devolução e 34 cartões prontos para explicar cada exigência ao seu cliente.</p>
+      <div class="price-line"><b>R$67</b><s>R$97</s><small>Preço de fundação: só para os primeiros 100</small></div>
+      <a class="btn" data-checkout href="https://pay.cakto.com.br/g8k4g3h">Quero o Dossiê do Financiamento →</a>
+      <div class="btn-note"><span>Acesso imediato</span><span>Celular e computador</span><span>Garantia de 7 dias</span></div>
+    </div>
+    <div class="cover">
+      <img src="img/capa-dossie.jpg" width="800" height="800" alt="Capa do Dossiê do Financiamento">
+      <div class="tag"><b>49 de 50</b>projetos aprovados</div>
+    </div>
+  </div>
+  <div class="stats">
+    <div><b>15</b><span>capítulos na ordem do seu trabalho</span></div>
+    <div><b>34</b><span>cartões para explicar ao cliente</span></div>
+    <div><b>250+</b><span>itens de checklist</span></div>
+    <div><b>+12</b><span>arquivos de um projeto real, de bônus</span></div>
+  </div>
+</div></section>
+
+<!-- DOR -->
+<section><div class="wrap two">
+  <div>
+    <div class="kicker">O problema</div>
+    <h2>O dossiê não volta por erro grande. <em>Volta por detalhe.</em></h2>
+    <p class="lead">Endereço da ART diferente da matrícula. Área do projeto diferente da PCI. Um assinou com gov.br, o outro assinou à mão. Cada devolução é uma semana perdida, e quem cobra é o cliente.</p>
+    <div class="chat">
+      <div class="bubble">Engenheiro, o correspondente disse que voltou de novo. O que aconteceu?<small>Cliente · 21:47</small></div>
+      <div class="bubble">Eu já paguei o terreno… quando começa a obra?<small>Cliente · 21:48</small></div>
+      <div class="bubble me">Vou verificar e te retorno.<small>Você · 22:15</small></div>
+    </div>
+  </div>
+  <div>
+    <div class="devolvido">
+      <div class="hd">Análise de engenharia <span class="stamp">Devolvido</span></div>
+      <ul>
+        <li>Endereço da ART ≠ matrícula</li>
+        <li>Área do projeto ≠ PCI</li>
+        <li>Assinaturas em padrões diferentes</li>
+        <li>Janela a 1,00 m da divisa</li>
+        <li>Orçamento fora das faixas sem justificativa</li>
+      </ul>
+    </div>
+    <p class="muted mt">Nada disso é falta de conhecimento técnico. É falta de um método para conferir tudo antes de enviar.</p>
+  </div>
+</div></section>
+
+<!-- MÉTODO -->
+<section class="alt"><div class="wrap">
+  <div class="center">
+    <div class="kicker">O que tem dentro</div>
+    <h2>Do primeiro atendimento <em>à última parcela.</em></h2>
+    <p class="lead">15 capítulos organizados na ordem em que o trabalho acontece. Você abre no capítulo da etapa em que está e segue.</p>
+  </div>
+  <div class="parts">
+    <div class="part"><div class="n">Parte 1</div><h3>Antes do projeto</h3><ul>
+      <li><b>As regras do jogo:</b> como o banco libera o dinheiro</li>
+      <li><b>O dinheiro:</b> como explicar ao cliente</li>
+      <li><b>Triagem do terreno</b> e pré-requisitos</li></ul></div>
+    <div class="part"><div class="n">Parte 2</div><h3>O projeto</h3><ul>
+      <li><b>Projeto que passa na análise</b>, prancha por prancha</li>
+      <li><b>Sistemas construtivos</b> e o que é aceito</li>
+      <li><b>Sustentabilidade</b> e Selo Casa Azul</li></ul></div>
+    <div class="part"><div class="n">Parte 3</div><h3>O dossiê</h3><ul>
+      <li><b>A PCI campo a campo</b>, com exemplo real de casa de 70 m²</li>
+      <li><b>Orçamento</b> e <b>cronograma</b> sem devolução</li>
+      <li><b>Reforma (PRM)</b>, montagem e entrega</li>
+      <li><b>Os erros que mais geram devolução</b></li></ul></div>
+    <div class="part"><div class="n">Parte 4</div><h3>Durante a obra</h3><ul>
+      <li><b>Acompanhamento</b> e medição (PLS)</li>
+      <li><b>Quando algo muda</b> no meio da obra</li></ul></div>
+    <div class="part"><div class="n">Parte 5</div><h3>Conclusão</h3><ul>
+      <li><b>Averbação</b> e liberação da última parcela</li></ul></div>
+    <div class="part"><div class="n">Anexos</div><h3>Pronto para usar</h3><ul>
+      <li><b>Checklist mestre</b> imprimível</li>
+      <li><b>Modelo de memorial</b> descritivo</li>
+      <li><b>Mensagem de WhatsApp</b> para pedir documentos</li>
+      <li><b>Prompts de IA</b> para memorial e revisão</li>
+      <li><b>Glossário</b></li></ul></div>
+  </div>
+</div></section>
+
+<!-- CARTÕES -->
+<section><div class="wrap two">
+  <div>
+    <div class="kicker">34 cartões para o cliente</div>
+    <h2>Pare de explicar a mesma exigência <em>dez vezes.</em></h2>
+    <p class="lead">"Por que a janela não pode ficar ali?" "Por que o banco não antecipa o dinheiro?" Cada dúvida comum do cliente tem um cartão pronto, em linguagem simples e com a base da regra. Tire um print ou copie o texto e mande no WhatsApp.</p>
+  </div>
+  <div>
+    <div class="card-demo">
+      <div class="t"><small>Explicação para o cliente</small><h3>Por que a janela não pode ficar perto do muro do vizinho?</h3></div>
+      <div class="b">A lei proíbe janela, varanda ou terraço de frente para o vizinho a menos de 1,50 m da divisa. Se a janela fica de lado (perpendicular), a distância mínima é de 0,75 m. É uma regra de privacidade do Código Civil, e o banco só aceita a casa como garantia se ela for cumprida.</div>
+      <div class="base"><b>Base:</b> Código Civil, art. 1.301.</div>
+      <div class="f"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1d6b4f"/><path d="M7 16 16 8l9 8" fill="none" stroke="#e9d9a6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 15v9h10v-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg>Engenheiro de Financiamento</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ÁREA DE MEMBROS -->
+<section class="alt"><div class="wrap two">
+  <div class="phone" aria-hidden="true"><div class="scr">
+    <div style="font-weight:800;font-size:15px">Montagem e entrega</div>
+    <div class="muted" style="font-size:12px">Capítulo 11 · Conferência antes de enviar</div>
+    <div class="bar"><i></i></div>
+    <div class="row done"><div class="k">✓</div><span>Endereço igual em PCI, ART e projeto</span></div>
+    <div class="row done"><div class="k">✓</div><span>Áreas batendo nos três documentos</span></div>
+    <div class="row on"><div class="k"></div><span>Orçamento dentro das faixas</span></div>
+    <div class="row"><div class="k"></div><span>Assinaturas no mesmo padrão</span></div>
+    <div class="row"><div class="k"></div><span>Fotos e plantas legíveis</span></div>
+    <div style="margin-top:12px;font-size:12px;color:var(--dim)">3 de 5 · seu progresso fica salvo</div>
+  </div></div>
+  <div>
+    <div class="kicker">Como você acessa</div>
+    <h2>No celular, na obra. <em>No computador, no escritório.</em></h2>
+    <div class="feats" style="grid-template-columns:1fr;gap:12px;margin-top:18px">
+      <div class="feat"><h3>✓ Checklists que você marca</h3><p>Mais de 250 itens. O progresso fica salvo no seu aparelho.</p></div>
+      <div class="feat"><h3>⌕ Busca em todo o manual</h3><p>Digite "fossa", "poço" ou "averbação" e caia direto no trecho.</p></div>
+      <div class="feat"><h3>⬇ Versão completa em PDF</h3><p>Para baixar, imprimir ou consultar sem internet.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- PROVA -->
+<section><div class="wrap proof">
+  <div class="big">49<i>/</i>50</div>
+  <div>
+    <div class="kicker">Quem escreveu</div>
+    <h2>O método de um engenheiro que vive disso.</h2>
+    <p class="lead">Faço projeto desde 2017 e tenho escritório próprio desde 2021. Foram 49 projetos aprovados em 50. O único reprovado não foi erro técnico: foi uma casa de 200 m² para uma renda de R$3.500. Coloquei no Dossiê o mesmo método que uso no escritório, sem pular etapa.</p>
+  </div>
+</div></section>
+
+<!-- PARA QUEM -->
+<section class="alt"><div class="wrap">
+  <div class="center"><div class="kicker">Para quem é</div><h2>Feito para quem <em>assina o projeto.</em></h2></div>
+  <div class="fit">
+    <div class="yes"><h3>É para você se</h3><ul>
+      <li>Você é engenheiro ou arquiteto e quer começar a fazer projetos financiados</li>
+      <li>Já teve dossiê devolvido e quer parar de perder semanas</li>
+      <li>Perde tempo explicando as mesmas exigências para cada cliente</li>
+      <li>Quer um checklist para conferir tudo antes de enviar</li></ul></div>
+    <div class="no"><h3>Não é para você se</h3><ul>
+      <li>Você procura uma promessa de aprovação garantida (ninguém pode dar isso: quem decide é o banco)</li>
+      <li>Você não trabalha nem pretende trabalhar com projeto financiado</li>
+      <li>Você quer um curso em vídeo: é um manual de consulta, direto ao ponto</li></ul></div>
+  </div>
+</div></section>
+
+<!-- BÔNUS -->
+<section><div class="wrap two">
+  <div>
+    <div class="kicker">Bônus incluso</div>
+    <h2>Um projeto real, <em>completo</em>, do jeito que foi para o banco.</h2>
+    <p class="lead">Além do manual, você recebe as pranchas de um projeto de casa de 70 m² aprovado no financiamento, para ver na prática como cada coisa do Dossiê fica no papel.</p>
+    <p class="muted mt">Os dados pessoais da cliente e do responsável técnico foram retirados. Todo o resto está como foi entregue.</p>
+  </div>
+  <div class="bonus-box">
+    <div class="bonus-tag">🎁 Bônus · 12 arquivos em PDF</div>
+    <ul>
+      <li><b>Arquitetura:</b> planta baixa, cobertura e situação, cortes e fachadas</li>
+      <li><b>Estrutural:</b> forma do térreo, fundação, forma da cobertura e pilares</li>
+      <li><b>Elétrico:</b> instalações elétricas</li>
+      <li><b>Hidrossanitário:</b> água fria (2 pranchas) e esgoto sanitário</li>
+      <li><b>PCI preenchida</b> do mesmo projeto</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- OFERTA -->
+<section id="oferta"><div class="wrap">
+  <div class="center"><div class="kicker">Oferta de fundação</div><h2>Menos que o custo de <em>uma devolução.</em></h2></div>
+  <div class="offer">
+    <div class="p">R$67<small>R$97</small></div>
+    <div class="muted">pagamento único · Pix ou cartão</div>
+    <ul>
+      <li>15 capítulos, do terreno à averbação</li>
+      <li>PCI campo a campo com exemplo real de casa de 70 m²</li>
+      <li>Orçamento e cronograma com justificativas prontas</li>
+      <li>34 cartões para explicar cada exigência ao cliente</li>
+      <li>Mais de 250 itens de checklist marcáveis</li>
+      <li>5 anexos: checklist mestre, memorial, WhatsApp, prompts de IA e glossário</li>
+      <li>Versão completa em PDF para baixar</li>
+      <li><b>🎁 Bônus:</b> projeto completo de casa de 70 m² aprovado (arquitetura, estrutural, elétrico, hidrossanitário e PCI preenchida)</li>
+    </ul>
+    <a class="btn" data-checkout href="https://pay.cakto.com.br/g8k4g3h">Quero o Dossiê por R$67 →</a>
+    <p class="lote">R$67 só para os primeiros 100 engenheiros. Depois, R$97. Sem contador falso: o preço muda pelo número de vendas.</p>
+    <div class="bump"><b style="color:var(--ink)">No checkout, se quiser:</b> adicione a <b style="color:var(--ink)">Planilha de Viabilidade</b>, que mostra se a casa cabe na renda do cliente antes de você projetar.</div>
+  </div>
+  <div class="guar">
+    <div class="seal">7<small>DIAS</small></div>
+    <div><b>Garantia incondicional de 7 dias.</b> <span class="muted">Se não gostar, por qualquer motivo, devolvemos 100% do valor. Sem perguntas.</span></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="alt"><div class="wrap">
+  <div class="center"><div class="kicker">Dúvidas</div><h2>Perguntas frequentes</h2></div>
+  <div class="faq">
+    <details><summary>Como eu recebo o acesso?</summary><p>Logo depois do pagamento aprovado, chega um e-mail com o link de acesso e o número do pedido. Você cria sua senha e entra na área de membros. No Pix, a aprovação costuma levar poucos minutos.</p></details>
+    <details><summary>O manual garante a aprovação do financiamento?</summary><p>Não. Quem analisa e decide é o banco. O Dossiê organiza a documentação e mostra como evitar os erros que mais geram devolução, para o seu dossiê chegar certo na análise.</p></details>
+    <details><summary>Este material é da Caixa?</summary><p>Não. É um material independente, escrito a partir da prática de um escritório de engenharia, sem vínculo com a Caixa Econômica Federal.</p></details>
+    <details><summary>Serve para quem nunca fez projeto financiado?</summary><p>Sim. Os capítulos seguem a ordem do trabalho, do primeiro atendimento à averbação. Quem já faz projetos usa como checklist de conferência.</p></details>
+    <details><summary>Serve para Minha Casa, Minha Vida e outras linhas?</summary><p>O foco é a construção em terreno próprio financiada, com capítulos sobre as diferenças entre as linhas e um capítulo próprio para reforma e melhoria (PRM).</p></details>
+    <details><summary>E se as regras mudarem?</summary><p>O conteúdo está atualizado conforme as exigências vigentes em outubro de 2026. Antes de cada proposta, confira sempre se o formulário que você baixou é a versão mais recente.</p></details>
+    <details><summary>Consigo usar no celular?</summary><p>Sim. A área de membros funciona no celular e no computador, com busca e checklists. E você ainda pode baixar a versão completa em PDF.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional. Peça o reembolso pela própria plataforma de pagamento e recebe 100% do valor.</p></details>
+  </div>
+  <div class="center mt"><a class="btn" data-checkout href="https://pay.cakto.com.br/g8k4g3h">Quero o Dossiê por R$67 →</a></div>
+</div></section>
+
+<footer class="avisos"><div class="wrap">
+  <p><b>Aviso de versão.</b> Conteúdo atualizado conforme as exigências vigentes em outubro/2026. Antes de cada proposta, confira se o formulário baixado é a versão mais recente.</p>
+  <p><b>Aviso de limites.</b> Este manual organiza a documentação e mostra como evitar os erros que mais geram devolução. Ele não garante aprovação: quem analisa e decide é o banco. A responsabilidade técnica pelo projeto e pela obra é de quem assina a ART, o RRT ou o TRT. Este material é independente e não tem vínculo com a Caixa Econômica Federal.</p>
+  <p>© 2026 Engenheiro de Financiamento. Pagamento processado pela Cakto.</p>
+</div></footer>
+
+<div class="sticky" id="sticky"><div><b>R$67</b><small>Preço de fundação · garantia de 7 dias</small></div><a class="btn" data-checkout href="https://pay.cakto.com.br/g8k4g3h">Quero o Dossiê</a></div>
+
+<script>
+// Repassa UTMs, sck e fbclid do anúncio para o checkout, para a Cakto saber de qual anúncio veio a venda.
+(function(){
+  var q=new URLSearchParams(location.search);
+  if(q.toString()) document.querySelectorAll('a[data-checkout]').forEach(function(a){
+    var u=new URL(a.href); q.forEach(function(v,k){u.searchParams.set(k,v)}); a.href=u.toString();
+  });
+  var s=document.getElementById('sticky'),o=document.getElementById('oferta');
+  function on(){var y=scrollY;s.classList.toggle('show',y>500&&!(o.getBoundingClientRect().top<innerHeight&&o.getBoundingClientRect().bottom>0))}
+  addEventListener('scroll',on,{passive:true});on();
+})();
+</script>
+</body>
+</html>
