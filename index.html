@@ -156,6 +156,32 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
 .pranchas img{width:100%;aspect-ratio:1.41;object-fit:cover;object-position:left top}
 .pranchas figcaption{background:var(--card);color:var(--mute);font-size:13px;padding:8px 12px}
 @media (max-width:860px){.pranchas{grid-template-columns:1fr 1fr}}
+.autor{width:min(320px,80vw);margin:0 auto;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.5);background:var(--card)}
+.autor img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%}
+.autor figcaption{padding:12px 16px;font-size:14px;color:var(--mute)}.autor b{color:var(--gold)}
+.perspectiva{margin-top:22px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.perspectiva img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 65%}
+.perspectiva figcaption{background:var(--card);color:var(--mute);font-size:13px;padding:8px 12px}
+[hidden]{display:none!important}
+.banner{padding:0 0 10px}.banner figure{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.banner img{width:100%;aspect-ratio:16/7;object-fit:cover}
+.banner figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 24px 18px;background:linear-gradient(transparent,rgba(12,17,14,.9));font-weight:800;font-size:clamp(18px,2.6vw,26px);letter-spacing:-.02em}
+.quiz{max-width:680px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px}
+.qhead{display:flex;justify-content:space-between;font-size:14px;font-weight:700;color:var(--mute)}#qpts{color:var(--gold)}
+.qbar{height:8px;border-radius:8px;background:var(--line);margin:10px 0 20px;overflow:hidden}.qbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--gold));transition:width .4s}
+.qtext{font-size:20px;font-weight:600;line-height:1.45;min-height:88px}
+.qbtns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.qbtns button{font:inherit;font-weight:800;font-size:18px;padding:16px;border-radius:14px;border:2px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer;transition:transform .12s,border-color .12s}
+.qbtns button:hover{transform:translateY(-2px);border-color:var(--green)}
+.qbtns button:disabled{cursor:default;transform:none;opacity:.55}
+.qbtns button.ok{border-color:var(--green);background:rgba(77,187,139,.15);opacity:1}.qbtns button.bad{border-color:var(--red);background:rgba(224,90,79,.12);opacity:1}
+.qfb{margin-top:18px;padding:16px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);display:grid;gap:8px;animation:qin .3s}
+.qfb b{font-size:18px}.qfb b.ok{color:var(--green)}.qfb b.bad{color:var(--red)}.qfb span{color:var(--mute);font-size:15px}
+.qnext,.qagain{justify-self:end;font:inherit;font-weight:700;background:none;border:0;color:var(--green);cursor:pointer;font-size:16px;padding:6px 0}
+.qend{text-align:center;display:grid;gap:12px;justify-items:center;animation:qin .4s}
+.badge{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;font-size:44px;font-weight:900;background:radial-gradient(circle at 30% 30%,#2c5a45,#14201a);border:3px solid var(--gold);color:var(--gold);box-shadow:0 0 0 8px rgba(214,178,94,.08)}
+.qagain{justify-self:center;color:var(--mute)}
+@keyframes qin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .guar{display:flex;gap:18px;align-items:center;max-width:640px;margin:22px auto 0;padding:20px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
 .guar .seal{flex:none;width:72px;height:72px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;text-align:center;font-weight:900;color:var(--gold);line-height:1;font-size:26px}
 .guar .seal small{display:block;font-size:10px;letter-spacing:.1em}
@@ -225,6 +251,8 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
   </div>
 </div></section>
 
+<section class="banner"><div class="wrap"><figure><img src="img/hero-planta-casa.png" alt="Desenho técnico de uma casa se transformando na casa pronta"><figcaption>Do projeto à casa pronta, sem devolução no caminho.</figcaption></figure></div></section>
+
 <!-- DOR -->
 <section><div class="wrap two">
   <div>
@@ -249,6 +277,34 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
       </ul>
     </div>
     <p class="muted mt">Nada disso é falta de conhecimento técnico. É falta de um método para conferir tudo antes de enviar.</p>
+  </div>
+</div></section>
+
+<!-- QUIZ -->
+<section class="alt" id="teste"><div class="wrap">
+  <div class="center">
+    <div class="kicker">Teste rápido · 1 minuto</div>
+    <h2>Seu dossiê passaria <em>na análise?</em></h2>
+    <p class="lead">5 situações reais de projeto. Para cada uma, diga se passa ou se volta. No fim, veja a sua pontuação.</p>
+  </div>
+  <div class="quiz" id="quiz">
+    <div class="qhead"><span id="qnum">Situação 1 de 5</span><span id="qpts">0 pontos</span></div>
+    <div class="qbar"><i id="qfill"></i></div>
+    <div class="qcard" id="qcard">
+      <p class="qtext" id="qtext"></p>
+      <div class="qbtns">
+        <button type="button" data-a="passa">✓ Passa</button>
+        <button type="button" data-a="volta">↩ Volta</button>
+      </div>
+      <div class="qfb" id="qfb" hidden><b id="qres"></b><span id="qexp"></span><button type="button" class="qnext" id="qnext">Próxima →</button></div>
+    </div>
+    <div class="qend" id="qend" hidden>
+      <div class="badge" id="qbadge"></div>
+      <h3 id="qtitle"></h3>
+      <p class="muted" id="qmsg"></p>
+      <a class="btn" data-checkout href="https://pay.cakto.com.br/g8k4g3h">Quero o Dossiê por R$67 →</a>
+      <button type="button" class="qagain" id="qagain">Refazer o teste</button>
+    </div>
   </div>
 </div></section>
 
@@ -330,7 +386,7 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
 
 <!-- PROVA -->
 <section><div class="wrap proof">
-  <div class="big" style="font-size:clamp(80px,13vw,150px)">2017</div>
+  <figure class="autor"><img src="img/helvio.jpg" alt="Foto do autor"><figcaption><b>Desde 2017</b> em projetos para financiamento</figcaption></figure>
   <div>
     <div class="kicker">Quem escreveu</div>
     <h2>Não é teoria de curso. É o checklist do dia a dia.</h2>
@@ -361,6 +417,7 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
     <h2>Um projeto real, <em>completo</em>, do jeito que foi para o banco.</h2>
     <p class="lead">Além do manual, você recebe as pranchas de um projeto de casa de 70 m² aprovado no financiamento, para ver na prática como cada coisa do Dossiê fica no papel.</p>
     <p class="muted mt">Os dados pessoais da cliente e do responsável técnico foram retirados. Todo o resto está como foi entregue.</p>
+    <figure class="perspectiva"><img src="img/casa-perspectiva.jpg" alt="Perspectiva ilustrativa da casa do projeto"><figcaption>Perspectiva ilustrativa da casa do projeto do bônus</figcaption></figure>
   </div>
   <div class="bonus-box">
     <div class="bonus-tag">🎁 Bônus · 12 arquivos em PDF</div>
@@ -444,6 +501,41 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
   var s=document.getElementById('sticky'),o=document.getElementById('oferta');
   function on(){var y=scrollY;s.classList.toggle('show',y>500&&!(o.getBoundingClientRect().top<innerHeight&&o.getBoundingClientRect().bottom>0))}
   addEventListener('scroll',on,{passive:true});on();
+})();
+</script>
+<script>
+(function(){
+  var Q=[
+    {t:"A janela do quarto fica de frente para o vizinho, a 1,00 m da divisa. A prefeitura aprovou o projeto.",a:"volta",e:"Para o financiamento vale o Código Civil (art. 1.301): janela de frente para o vizinho precisa de no mínimo 1,50 m da divisa. Prefeitura aprovar não basta."},
+    {t:"O endereço da ART foi copiado do carnê do IPTU e está escrito diferente do que consta na matrícula do terreno.",a:"volta",e:"O endereço precisa ser igual em todos os documentos, copiado da matrícula. Divergência de endereço é uma das causas mais comuns de devolução."},
+    {t:"Casa de 70 m² com caixa d'água de 500 litros, chuveiro em circuito próprio e DR no quadro.",a:"passa",e:"Correto: reserva mínima de 500 litros, circuito exclusivo para o chuveiro e DR são exigidos, e esse projeto atende."},
+    {t:"Financiamento pelo Minha Casa, Minha Vida. A casa terá só laje impermeabilizada, sem telhado.",a:"volta",e:"Laje sem telhado só é aceita numa linha específica (SBPE). No MCMV e no FGTS, a casa precisa de telhado."},
+    {t:"O esgoto vai para uma fossa, sem filtro e sem sumidouro.",a:"volta",e:"Fossa sozinha não completa o tratamento. A norma (ABNT NBR 17076) pede fossa com filtro e/ou sumidouro, em distâncias seguras."}
+  ];
+  var i=0,pts=0,$=function(id){return document.getElementById(id)};
+  var btns=[].slice.call(document.querySelectorAll('.qbtns button'));
+  function show(){
+    var q=Q[i]; $('qnum').textContent='Situação '+(i+1)+' de '+Q.length; $('qtext').textContent=q.t;
+    $('qfill').style.width=(100*i/Q.length)+'%'; $('qfb').hidden=true;
+    btns.forEach(function(b){b.disabled=false;b.className=''});
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var q=Q[i],ok=b.dataset.a===q.a; if(ok)pts+=20;
+    btns.forEach(function(x){x.disabled=true; if(x.dataset.a===q.a)x.className='ok'; else if(x===b)x.className='bad'});
+    $('qres').textContent=ok?'Acertou! +20 pontos':'Essa voltaria do banco.'; $('qres').className=ok?'ok':'bad';
+    $('qexp').textContent=q.e; $('qpts').textContent=pts+' pontos'; $('qfill').style.width=(100*(i+1)/Q.length)+'%';
+    $('qnext').textContent=i<Q.length-1?'Próxima →':'Ver meu resultado →'; $('qfb').hidden=false;
+  })});
+  $('qnext').addEventListener('click',function(){ i++; if(i<Q.length){show();return}
+    $('qcard').hidden=true; $('qend').hidden=false; var n=pts/20;
+    $('qbadge').textContent=n+'/5';
+    if(n===5){$('qtitle').textContent='Olho de analista';$('qmsg').textContent='Você acertou tudo. O Dossiê vai ser o seu checklist para nunca deixar passar nenhum dos mais de 250 itens.'}
+    else if(n>=3){$('qtitle').textContent='Quase lá';$('qmsg').textContent='Você errou '+(5-n)+' de 5. Cada erro desses é uma devolução. No Dossiê estão todas essas regras, com checklist para conferir antes de enviar.'}
+    else{$('qtitle').textContent='Alerta de devolução';$('qmsg').textContent='Você errou '+(5-n)+' de 5. Não se preocupe: é exatamente para isso que o Dossiê existe, com cada regra explicada e um checklist para conferir antes de enviar.'}
+    try{fbq('trackCustom','TesteConcluido',{acertos:n})}catch(e){}
+  });
+  $('qagain').addEventListener('click',function(){i=0;pts=0;$('qpts').textContent='0 pontos';$('qend').hidden=true;$('qcard').hidden=false;show()});
+  show();
 })();
 </script>
 </body>
