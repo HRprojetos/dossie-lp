@@ -151,6 +151,11 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
 .bonus-box li{padding-left:26px;position:relative;color:var(--mute)}
 .bonus-box li b{color:var(--ink)}
 .bonus-box li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:900}
+.pranchas{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pranchas figure{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.pranchas img{width:100%;aspect-ratio:1.41;object-fit:cover;object-position:left top}
+.pranchas figcaption{background:var(--card);color:var(--mute);font-size:13px;padding:8px 12px}
+@media (max-width:860px){.pranchas{grid-template-columns:1fr 1fr}}
 .guar{display:flex;gap:18px;align-items:center;max-width:640px;margin:22px auto 0;padding:20px 22px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
 .guar .seal{flex:none;width:72px;height:72px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;text-align:center;font-weight:900;color:var(--gold);line-height:1;font-size:26px}
 .guar .seal small{display:block;font-size:10px;letter-spacing:.1em}
@@ -209,7 +214,7 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
     </div>
     <div class="cover">
       <img src="img/capa-dossie.jpg" width="800" height="800" alt="Capa do Dossiê do Financiamento">
-      <div class="tag"><b>49 de 50</b>projetos aprovados</div>
+      <div class="tag"><b>Desde 2017</b>projetos para financiamento</div>
     </div>
   </div>
   <div class="stats">
@@ -325,11 +330,11 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
 
 <!-- PROVA -->
 <section><div class="wrap proof">
-  <div class="big">49<i>/</i>50</div>
+  <div class="big" style="font-size:clamp(80px,13vw,150px)">2017</div>
   <div>
     <div class="kicker">Quem escreveu</div>
-    <h2>O método de um engenheiro que vive disso.</h2>
-    <p class="lead">Faço projeto desde 2017 e tenho escritório próprio desde 2021. Foram 49 projetos aprovados em 50. O único reprovado não foi erro técnico: foi uma casa de 200 m² para uma renda de R$3.500. Coloquei no Dossiê o mesmo método que uso no escritório, sem pular etapa.</p>
+    <h2>Não é teoria de curso. É o checklist do dia a dia.</h2>
+    <p class="lead">Faço projeto para financiamento desde 2017 e tenho escritório próprio desde 2021. Tudo o que está no Dossiê saiu de devolução real, exigência real e cliente real. É o mesmo checklist que eu uso antes de mandar cada dossiê, do terreno à averbação.</p>
   </div>
 </div></section>
 
@@ -367,6 +372,16 @@ p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--mute);max-width:640px}
       <li><b>PCI preenchida</b> do mesmo projeto</li>
     </ul>
   </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="pranchas">
+    <figure><img src="img/prancha-planta.jpg" alt="Prancha de planta baixa, cobertura e situação"><figcaption>Planta baixa, cobertura e situação</figcaption></figure>
+    <figure><img src="img/prancha-fachadas.jpg" alt="Prancha de fachadas"><figcaption>Fachadas</figcaption></figure>
+    <figure><img src="img/prancha-cortes.jpg" alt="Prancha de cortes"><figcaption>Cortes</figcaption></figure>
+    <figure><img src="img/prancha-estrutural.jpg" alt="Prancha estrutural"><figcaption>Estrutural: forma do térreo</figcaption></figure>
+  </div>
+  <p class="muted" style="font-size:14px;margin-top:12px">Pranchas reais do bônus, em miniatura. Dados pessoais da cliente e do responsável técnico retirados.</p>
 </div></section>
 
 <!-- OFERTA -->
