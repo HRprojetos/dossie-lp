@@ -348,6 +348,9 @@ p.lead{color:#1E3A6E}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
 @media (prefers-reduced-motion:reduce){.promo .track{animation:none}}
 .top{top:34px}
+.btn.ghost{background:transparent;color:var(--green-d);box-shadow:inset 0 0 0 2px var(--green-d)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--green-d),0 10px 24px rgba(10,24,56,.15)}
+#detalhe{scroll-margin-top:60px}
 </style>
 </head>
 <body>
@@ -355,7 +358,6 @@ p.lead{color:#1E3A6E}
 
 <header class="top"><div class="wrap">
   <a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0A1838"/><path d="M7 16 16 8l9 8" fill="none" stroke="#C8F53B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 15v9h10v-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M14 24v-4h4v4" fill="none" stroke="#fff" stroke-width="2"/></svg>Engenheiro de Financiamento</a>
-  <a class="btn sm" data-checkout href="https://pay.kiwify.com.br/jz89AqL">Quero o manual · R$37</a>
 </div></header>
 
 <!-- HERO -->
@@ -365,9 +367,9 @@ p.lead{color:#1E3A6E}
       <div class="kicker">Código do Projeto Financiado</div>
       <h1>O que faz a Caixa devolver seu projeto, <em>e como conferir tudo antes de enviar.</em></h1>
       <p class="lead">O manual do projeto financiado pela Caixa, inclusive no Minha Casa, Minha Vida: PCI campo a campo, orçamento, cronograma, PLS e os erros que fazem o projeto voltar.</p>
-      <div class="price-line"><b>R$37</b><small>Pagamento único · sem mensalidade</small></div>
-      <a class="btn" data-checkout href="https://pay.kiwify.com.br/jz89AqL">Quero o manual · R$37</a>
-      <div class="btn-note"><span>Acesso imediato</span><span>Celular e computador</span><span>Garantia de 7 dias</span></div>
+      <div class="price-line"><b>R$37</b><small>Pagamento único · acesso vitalício</small></div>
+      <a class="btn ghost" href="#detalhe">Ver o que tem no manual ↓</a>
+      <div class="btn-note"><span>Acesso imediato e vitalício</span><span>Celular e computador</span><span>Garantia de 7 dias</span></div>
     </div>
     <div class="cover">
       <img src="img/capa-codigo-v2.jpg" width="800" height="800" fetchpriority="high" alt="Capa do Código do Projeto Financiado">
@@ -386,7 +388,7 @@ p.lead{color:#1E3A6E}
 <section class="banner"><div class="wrap"><figure><picture><source srcset="img/obra-compatibilizada.webp" type="image/webp"><img src="img/obra-compatibilizada.jpg" width="1536" height="1024" loading="lazy" decoding="async" style="object-position:center 40%" alt="Obra com estrutura e tubulações compatibilizadas"></picture><figcaption>Do projeto à obra, com tudo conferido antes de enviar.</figcaption></figure></div></section>
 
 <!-- DOR -->
-<section><div class="wrap two">
+<section id="detalhe"><div class="wrap two">
   <div>
     <div class="kicker">O problema</div>
     <h2>O projeto não volta da Caixa por erro grande. <em>Volta por detalhe.</em></h2>
@@ -606,7 +608,7 @@ p.lead{color:#1E3A6E}
   <div class="center"><div class="kicker">A oferta</div><h2>Menos que o custo de <em>uma devolução.</em></h2></div>
   <div class="offer">
     <div class="p">R$37</div>
-    <div class="muted">pagamento único · Pix ou cartão</div>
+    <div class="muted">pagamento único · acesso vitalício · Pix ou cartão</div>
     <ul>
       <li>15 capítulos, do terreno à averbação</li>
       <li>PCI campo a campo com exemplo real de casa de 70 m²</li>
@@ -631,12 +633,13 @@ p.lead{color:#1E3A6E}
 <section class="alt"><div class="wrap">
   <div class="center"><div class="kicker">Dúvidas</div><h2>Perguntas frequentes</h2></div>
   <div class="faq">
-    <details><summary>Como eu recebo o acesso?</summary><p>Logo depois do pagamento aprovado, chega um e-mail com o link de acesso e o número do pedido. Você cria sua senha e entra na área de membros. No Pix, a aprovação costuma levar poucos minutos.</p></details>
+    <details><summary>Como eu recebo o acesso?</summary><p>Logo depois do pagamento aprovado, chega um e-mail com o seu login e a senha da área de membros. É só entrar. No Pix, a aprovação costuma levar poucos minutos.</p></details>
     <details><summary>O manual garante a aprovação do financiamento?</summary><p>Não. Quem analisa e decide é o banco. O Código organiza a documentação e mostra como evitar os erros que mais geram devolução, para o seu projeto chegar certo na análise.</p></details>
     <details><summary>Este material é da Caixa?</summary><p>Não. É um material independente, escrito a partir da prática de um escritório de engenharia, sem vínculo com a Caixa Econômica Federal.</p></details>
     <details><summary>Serve para quem nunca fez projeto financiado?</summary><p>Sim. Os capítulos seguem a ordem do trabalho, do primeiro atendimento à averbação. Quem já faz projetos usa como checklist de conferência.</p></details>
     <details><summary>Serve para Minha Casa, Minha Vida e outras linhas?</summary><p>O foco é a construção em terreno próprio financiada, com capítulos sobre as diferenças entre as linhas e um capítulo próprio para reforma e melhoria (PRM).</p></details>
     <details><summary>E se as regras mudarem?</summary><p>O conteúdo está atualizado conforme as exigências vigentes em outubro de 2026. Antes de cada proposta, confira sempre se o formulário que você baixou é a versão mais recente.</p></details>
+    <details><summary>O acesso expira?</summary><p>Não. O acesso é vitalício: você paga uma vez e entra quando quiser, sem mensalidade.</p></details>
     <details><summary>Consigo usar no celular?</summary><p>Sim. A área de membros funciona no celular e no computador, com busca e checklists. E você ainda pode baixar a versão completa em PDF.</p></details>
     <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional. Peça o reembolso pela própria plataforma de pagamento e recebe 100% do valor.</p></details>
   </div>
@@ -649,7 +652,7 @@ p.lead{color:#1E3A6E}
   <p>© 2026 Engenheiro de Financiamento. Pagamento processado pela Kiwify.</p>
 </div></footer>
 
-<div class="sticky" id="sticky"><div><b>R$37</b><small>Pagamento único · garantia de 7 dias</small></div><a class="btn" data-checkout href="https://pay.kiwify.com.br/jz89AqL">Quero o manual</a></div>
+<div class="sticky" id="sticky"><div><b>R$37</b><small>Pagamento único · acesso vitalício</small></div><a class="btn" data-checkout href="https://pay.kiwify.com.br/jz89AqL">Quero o manual</a></div>
 
 <script>
 // Repassa UTMs, sck e fbclid do anúncio para o checkout, para a Kiwify saber de qual anúncio veio a venda.
@@ -661,7 +664,6 @@ p.lead{color:#1E3A6E}
   var s=document.getElementById('sticky'),o=document.getElementById('oferta');
   function on(){var y=scrollY;s.classList.toggle('show',y>500&&!(o.getBoundingClientRect().top<innerHeight&&o.getBoundingClientRect().bottom>0))}
   addEventListener('scroll',on,{passive:true});on();
-  document.querySelectorAll('a[data-checkout]').forEach(function(a){a.addEventListener('click',function(){try{fbq('track','InitiateCheckout',{content_name:'Código do Projeto Financiado',value:37,currency:'BRL'})}catch(e){}})});
 })();
 </script>
 <script>
